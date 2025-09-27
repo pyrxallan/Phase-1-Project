@@ -3,9 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>School Club Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="app">
+        <header>
+            <div class="header-content">
+                <div class="logo-container">
+                    <div>
+                        <div class="logo">MORINGA</div>
+                        <div class="tagline">Discover • Grow • Transform</div>
+                    </div>
+                </div>
+                <nav>
+                    <button class="nav-btn active" data-view="clubs">All Clubs</button>
+                    <button class="nav-btn" data-view="events">Upcoming Events</button>
+                    <button class="nav-btn" data-view="register">Join a Club</button>
+                </nav>
+                <div class="header-controls">
+                    <div class="search-container">
+                        <input type="text" id="search" placeholder="Search clubs...">
+                    </div>
+                    <button id="theme-toggle" class="theme-btn">🌙</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Clubs View -->
+            <div id="clubs-view" class="view active">
+                <div class="view-header">
+                    <h2>All School Clubs</h2>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="Academic">Academic</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Service">Service</option>
+                    </select>
+                </div>
+                <div id="clubs-container" class="clubs-grid"></div>
+            </div>
+
+            <!-- Events View -->
+            <div id="events-view" class="view">
+                <div class="view-header">
+                    <h2>Upcoming Events</h2>
+                </div>
+                <div id="events-container"></div>
+            </div>
+
+            <!-- Registration View -->
+            <div id="register-view" class="view">
+                <div class="view-header">
+                    <h2>Join a Club</h2>
+                </div>
+                <form id="registration-form" class="registration-form">
+                    <div class="form-group">
+                        <label for="student-name">Full Name:</label>
+                        <input type="text" id="student-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-email">Email:</label>
+                        <input type="email" id="student-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-grade">Grade:</label>
+                        <select id="student-grade" required>
+                            <option value="">Select Grade</option>
+                            <option value="9">9th Grade</option>
+                            <option value="10">10th Grade</option>
+                            <option value="11">11th Grade</option>
+                            <option value="12">12th Grade</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="club-select">Select Club:</label>
+                        <select id="club-select" required>
+                            <option value="">Choose a Club</option>
+                        </select>
+                    </div>
+                    <button type="submit">Join Club</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- Club Detail Modal -->
+        <div id="club-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-content"></div>
+            </div>
+        </div>
+
+        <!-- Notification -->
+        <div id="notification" class="notification hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
