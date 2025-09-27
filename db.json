@@ -1,0 +1,101 @@
+{
+  "clubs": [
+    {
+      "id": 1,
+      "name": "Code Masters Club",
+      "description": "Advanced programming club for Moringa students to collaborate on real-world projects and prepare for tech careers.",
+      "category": "Technology",
+      "meetingTime": "Mondays 6:00 PM",
+      "location": "Tech Lab A",
+      "members": 32,
+      "image": "💻",
+      "advisor": "Mr. Kamau",
+      "upcomingEvents": [
+        "Hackathon Challenge - Oct 20",
+        "Guest Tech Talk - Nov 5",
+        "Project Demo Day - Dec 10"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Data Science Guild",
+      "description": "Explore data analysis, machine learning, and AI technologies with hands-on projects and industry insights.",
+      "category": "Technology",
+      "meetingTime": "Wednesdays 5:30 PM",
+      "location": "Data Lab",
+      "members": 28,
+      "image": "📊",
+      "advisor": "Dr. Wanjiku",
+      "upcomingEvents": [
+        "Kaggle Competition - Oct 25",
+        "ML Workshop - Nov 8",
+        "Data Visualization Contest - Dec 5"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "UX Design Collective",
+      "description": "Learn user experience design principles and create innovative digital solutions for local communities.",
+      "category": "Design",
+      "meetingTime": "Tuesdays 4:00 PM",
+      "location": "Design Studio",
+      "members": 24,
+      "image": "🎨",
+      "advisor": "Ms. Achieng",
+      "upcomingEvents": [
+        "Design Sprint - Oct 18",
+        "Portfolio Review - Nov 12",
+        "Community Project - Dec 8"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cyber Security Squad",
+      "description": "Develop security skills through ethical hacking challenges and cybersecurity competitions.",
+      "category": "Technology",
+      "meetingTime": "Thursdays 6:30 PM",
+      "location": "Security Lab",
+      "members": 19,
+      "image": "🔒",
+      "advisor": "Mr. Odhiambo",
+      "upcomingEvents": [
+        "CTF Competition - Oct 22",
+        "Security Workshop - Nov 15",
+        "Industry Panel - Dec 12"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Entrepreneurship Hub",
+      "description": "Foster innovation and business skills through startup simulations and mentorship programs.",
+      "category": "Business",
+      "meetingTime": "Fridays 5:00 PM",
+      "location": "Innovation Center",
+      "members": 35,
+      "image": "💡",
+      "advisor": "Mrs. Mwangi",
+      "upcomingEvents": [
+        "Pitch Competition - Oct 28",
+        "Mentor Mixer - Nov 18",
+        "Business Plan Contest - Dec 15"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Community Tech Outreach",
+      "description": "Apply tech skills to solve community challenges and promote digital literacy in Nairobi.",
+      "category": "Service",
+      "meetingTime": "Saturdays 10:00 AM",
+      "location": "Community Center",
+      "members": 42,
+      "image": "🤝",
+      "advisor": "Mr. Chege",
+      "upcomingEvents": [
+        "Digital Literacy Drive - Oct 30",
+        "Community Hackathon - Nov 20",
+        "Tech Donation Day - Dec 18"
+      ]
+    }
+  ],
+  "registrations": []
+}
