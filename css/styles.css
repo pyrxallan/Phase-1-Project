@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --moringa-green: #00B140;
+    --moringa-dark-green: #008C31;
+    --moringa-blue: #0056B3;
+    --moringa-dark-blue: #003D82;
+    --moringa-light-gray: #F8F9FA;
+    --moringa-dark-gray: #2D3748;
+    --moringa-white: #FFFFFF;
+    --moringa-black: #1A202C;
+}
+
+.dark-mode {
+    --moringa-green: #00D44D;
+    --moringa-dark-green: #00B140;
+    --moringa-blue: #3B82F6;
+    --moringa-dark-blue: #1E40AF;
+    --moringa-light-gray: #1A202C;
+    --moringa-dark-gray: #E2E8F0;
+    --moringa-white: #2D3748;
+    --moringa-black: #F7FAFC;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--moringa-light-gray);
+    color: var(--moringa-black);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+/* Moringa School Header Styles */
+header {
+    background: linear-gradient(135deg, var(--moringa-green), var(--moringa-blue));
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 177, 64, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z" fill="white"/></svg>');
+    background-size: 200px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, white, #E0F7E9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 0.25rem;
+}
+
+nav {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn {
+    background: transparent;
+    border: 2px solid transparent;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    min-width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input:focus {
+    outline: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(15deg);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.view {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.view.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.view-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.view-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--moringa-green), var(--moringa-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#category-filter {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--moringa-green);
+    border-radius: 0.75rem;
+    background: var(--moringa-white);
+    color: var(--moringa-black);
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0, 177, 64, 0.1);
+}
+
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.club-card {
+    background: var(--moringa-white);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 177, 64, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.club-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--moringa-green), var(--moringa-blue));
+}
+
+.club-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 177, 64, 0.2);
+    border-color: var(--moringa-green);
+}
+
+.club-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.club-emoji {
+    font-size: 3rem;
+    background: linear-gradient(45deg, var(--moringa-green), var(--moringa-blue));
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 177, 64, 0.3);
+}
+
+.club-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--moringa-dark-blue);
+    font-weight: 700;
+}
+
+.club-category {
+    background: linear-gradient(45deg, var(--moringa-green), var(--moringa-blue));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 2px 10px rgba(0, 177, 64, 0.3);
+}
+
+.club-details {
+    margin-top: 1.5rem;
+}
+
+.club-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--moringa-dark-gray);
+}
+
+.event-list {
+    margin-top: 1.5rem;
+}
+
+.event-item {
+    background: linear-gradient(45deg, rgba(0, 177, 64, 0.1), rgba(0, 86, 179, 0.1));
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--moringa-green);
+    font-weight: 500;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--moringa-white);
+    margin: 5% auto;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--moringa-green);
+}
+
+.close {
+    color: var(--moringa-dark-gray);
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    color: var(--moringa-green);
+    transform: scale(1.2);
+}
+
+/* Registration Form */
+.registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--moringa-white);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 177, 64, 0.15);
+    border: 2px solid rgba(0, 177, 64, 0.1);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--moringa-dark-blue);
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 0.75rem;
+    background: var(--moringa-light-gray);
+    color: var(--moringa-black);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--moringa-green);
+    box-shadow: 0 0 0 3px rgba(0, 177, 64, 0.1);
+    transform: translateY(-2px);
+}
+
+.registration-form button {
+    width: 100%;
+    background: linear-gradient(45deg, var(--moringa-green), var(--moringa-blue));
+    color: white;
+    padding: 1.25rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 177, 64, 0.4);
+}
+
+.registration-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 177, 64, 0.6);
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 600;
+    z-index: 1001;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.notification.success {
+    background: linear-gradient(45deg, var(--moringa-green), var(--moringa-dark-green));
+}
+
+.notification.error {
+    background: linear-gradient(45deg, #EF4444, #DC2626);
+}
+
+.notification.hidden {
+    display: none;
+}
+
+/* Events View */
+.events-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.event-card {
+    background: var(--moringa-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 177, 64, 0.1);
+    border-left: 6px solid var(--moringa-green);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 177, 64, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .clubs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .view-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .search-container input {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        padding: 2rem;
+        width: 95%;
+    }
+}
+
+/* Moringa School Specific Animations */
+@keyframes moringaPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.moringa-pulse {
+    animation: moringaPulse 2s infinite;
+}
+
+/* Loading Spinner */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
