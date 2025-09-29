@@ -3,7 +3,10 @@ class SchoolClubApp {
         this.clubs = [];
         this.filteredClubs = [];
         this.currentView = 'clubs';
-        this.baseUrl = 'http://localhost:3000';
+        // Auto-detect environment
+        this.baseUrl = window.location.hostname === 'localhost' 
+            ? 'http://localhost:3000' 
+            : 'https://my-json-server.typicode.com/issallan/Phase-1-Project';
         this.init();
     }
 
