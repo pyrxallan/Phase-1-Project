@@ -1,7 +1,7 @@
 {
   "clubs": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Code Masters Club",
       "description": "Advanced programming club for Moringa students to collaborate on real-world projects and prepare for tech careers.",
       "category": "Technology",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Data Science Guild",
       "description": "Explore data analysis, machine learning, and AI technologies with hands-on projects and industry insights.",
       "category": "Technology",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "UX Design Collective",
       "description": "Learn user experience design principles and create innovative digital solutions for local communities.",
       "category": "Design",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Cyber Security Squad",
       "description": "Develop security skills through ethical hacking challenges and cybersecurity competitions.",
       "category": "Technology",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Entrepreneurship Hub",
       "description": "Foster innovation and business skills through startup simulations and mentorship programs.",
       "category": "Business",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Community Tech Outreach",
       "description": "Apply tech skills to solve community challenges and promote digital literacy in Nairobi.",
       "category": "Service",
@@ -102,57 +102,17 @@
       "id": "4a7c",
       "name": "Allan Ratemo",
       "email": "allanisratemo@gmail.com",
-      "grade": "11",
+      "grade": "sdf-15",
       "clubId": 1,
       "timestamp": "2025-09-29T06:29:41.984Z"
     },
     {
-      "id": "585d",
-      "name": "Allan Ratemo",
-      "email": "allanisratemo@gmail.com",
-      "grade": "11",
-      "clubId": 1,
-      "timestamp": "2025-09-29T06:29:44.034Z"
-    },
-    {
-      "id": "7fb9",
-      "name": "Allan Ratemo",
-      "email": "allanisratemo@gmail.com",
-      "grade": "11",
-      "clubId": 1,
-      "timestamp": "2025-09-29T06:29:45.049Z"
-    },
-    {
-      "id": "b943",
-      "name": "Allan Ratemo",
-      "email": "allanisratemo@gmail.com",
-      "grade": "11",
-      "clubId": 1,
-      "timestamp": "2025-09-29T06:29:45.270Z"
-    },
-    {
-      "id": "f989",
-      "name": "Allan Ratemo",
-      "email": "allanisratemo@gmail.com",
-      "grade": "11",
-      "clubId": 1,
-      "timestamp": "2025-09-29T06:29:45.732Z"
-    },
-    {
-      "id": "d3b7",
-      "name": "Allan Ratemo",
-      "email": "allanisratemo@gmail.com",
-      "grade": "11",
-      "clubId": 1,
-      "timestamp": "2025-09-29T06:29:46.997Z"
-    },
-    {
-      "id": "8c5e",
-      "name": "Allan Ratemo",
-      "email": "allanisratemo@gmail.com",
-      "grade": "11",
-      "clubId": 1,
-      "timestamp": "2025-09-29T06:29:47.791Z"
+      "id": "fa77",
+      "name": "Larry Madowo",
+      "email": "larrymadowo@cnn.ac.us",
+      "grade": "sdf-15",
+      "clubId": 4,
+      "timestamp": "2025-09-29T06:38:27.355Z"
     }
   ]
 }
