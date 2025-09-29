@@ -9,7 +9,7 @@
       "location": "Tech Lab A",
       "members": 32,
       "image": "💻",
-      "advisor": "Mr. Kamau",
+      "advisor": "Peter Muturi",
       "upcomingEvents": [
         "Hackathon Challenge - Oct 20",
         "Guest Tech Talk - Nov 5",
@@ -25,7 +25,7 @@
       "location": "Data Lab",
       "members": 28,
       "image": "📊",
-      "advisor": "Dr. Wanjiku",
+      "advisor": "Albert Byrone",
       "upcomingEvents": [
         "Kaggle Competition - Oct 25",
         "ML Workshop - Nov 8",
@@ -41,7 +41,7 @@
       "location": "Design Studio",
       "members": 24,
       "image": "🎨",
-      "advisor": "Ms. Achieng",
+      "advisor": "Anita Khahenya",
       "upcomingEvents": [
         "Design Sprint - Oct 18",
         "Portfolio Review - Nov 12",
@@ -57,7 +57,7 @@
       "location": "Security Lab",
       "members": 19,
       "image": "🔒",
-      "advisor": "Mr. Odhiambo",
+      "advisor": "Eric Mong'are",
       "upcomingEvents": [
         "CTF Competition - Oct 22",
         "Security Workshop - Nov 15",
@@ -73,7 +73,7 @@
       "location": "Innovation Center",
       "members": 35,
       "image": "💡",
-      "advisor": "Mrs. Mwangi",
+      "advisor": "Nelson Muriithi",
       "upcomingEvents": [
         "Pitch Competition - Oct 28",
         "Mentor Mixer - Nov 18",
@@ -89,7 +89,7 @@
       "location": "Community Center",
       "members": 42,
       "image": "🤝",
-      "advisor": "Mr. Chege",
+      "advisor": "Titus Ouko",
       "upcomingEvents": [
         "Digital Literacy Drive - Oct 30",
         "Community Hackathon - Nov 20",
@@ -97,5 +97,62 @@
       ]
     }
   ],
-  "registrations": []
+  "registrations": [
+    {
+      "id": "4a7c",
+      "name": "Allan Ratemo",
+      "email": "allanisratemo@gmail.com",
+      "grade": "11",
+      "clubId": 1,
+      "timestamp": "2025-09-29T06:29:41.984Z"
+    },
+    {
+      "id": "585d",
+      "name": "Allan Ratemo",
+      "email": "allanisratemo@gmail.com",
+      "grade": "11",
+      "clubId": 1,
+      "timestamp": "2025-09-29T06:29:44.034Z"
+    },
+    {
+      "id": "7fb9",
+      "name": "Allan Ratemo",
+      "email": "allanisratemo@gmail.com",
+      "grade": "11",
+      "clubId": 1,
+      "timestamp": "2025-09-29T06:29:45.049Z"
+    },
+    {
+      "id": "b943",
+      "name": "Allan Ratemo",
+      "email": "allanisratemo@gmail.com",
+      "grade": "11",
+      "clubId": 1,
+      "timestamp": "2025-09-29T06:29:45.270Z"
+    },
+    {
+      "id": "f989",
+      "name": "Allan Ratemo",
+      "email": "allanisratemo@gmail.com",
+      "grade": "11",
+      "clubId": 1,
+      "timestamp": "2025-09-29T06:29:45.732Z"
+    },
+    {
+      "id": "d3b7",
+      "name": "Allan Ratemo",
+      "email": "allanisratemo@gmail.com",
+      "grade": "11",
+      "clubId": 1,
+      "timestamp": "2025-09-29T06:29:46.997Z"
+    },
+    {
+      "id": "8c5e",
+      "name": "Allan Ratemo",
+      "email": "allanisratemo@gmail.com",
+      "grade": "11",
+      "clubId": 1,
+      "timestamp": "2025-09-29T06:29:47.791Z"
+    }
+  ]
 }
