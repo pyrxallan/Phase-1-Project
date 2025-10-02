@@ -70,7 +70,7 @@ Submit event (registration form)
 ✅ JSON Communication - Data fetched and handled as JSON
 ✅ DRY Code Principles - Reusable functions and components
 
-### 🎯 Installation & Setup
+### Installation & Setup
 Prerequisites
 A modern web browser
 
