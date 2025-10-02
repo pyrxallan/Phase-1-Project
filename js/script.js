@@ -1,13 +1,14 @@
-constructor() {
-    this.clubs = [];
-    this.filteredClubs = [];
-    this.currentView = 'clubs';
-    // For Render deployment
-    this.baseUrl = window.location.hostname === 'localhost' 
-        ? 'http://localhost:3000' 
-        : 'https://your-app-name.onrender.com'; 
-    this.init();
-}
+class SchoolClubApp {
+    constructor() {
+        this.clubs = [];
+        this.filteredClubs = [];
+        this.currentView = 'clubs';
+        // For Render deployment
+        this.baseUrl = window.location.hostname === 'localhost' 
+            ? 'http://localhost:3000' 
+            : 'https://your-app-name.onrender.com';
+        this.init();
+    }
 
     async init() {
         await this.fetchClubs();
