@@ -6,7 +6,7 @@ class SchoolClubApp {
         // Auto-detect environment
         this.baseUrl = window.location.hostname === 'localhost' 
             ? 'http://localhost:3000' 
-            : 'https://my-json-server.typicode.com/issallan/Phase-1-Project';
+            : 'https://my-json-server.typicode.com/pyrxallan/Phase-1-Project';
         this.init();
     }
 
