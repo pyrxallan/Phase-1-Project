@@ -1,14 +1,13 @@
-class SchoolClubApp {
-    constructor() {
-        this.clubs = [];
-        this.filteredClubs = [];
-        this.currentView = 'clubs';
-        // Auto-detect environment
-        this.baseUrl = window.location.hostname === 'localhost' 
-            ? 'http://localhost:3000' 
-            : 'https://my-json-server.typicode.com/pyrxallan/Phase-1-Project';
-        this.init();
-    }
+constructor() {
+    this.clubs = [];
+    this.filteredClubs = [];
+    this.currentView = 'clubs';
+    // For Render deployment
+    this.baseUrl = window.location.hostname === 'localhost' 
+        ? 'http://localhost:3000' 
+        : 'https://your-app-name.onrender.com'; 
+    this.init();
+}
 
     async init() {
         await this.fetchClubs();

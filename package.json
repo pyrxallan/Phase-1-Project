@@ -1,5 +1,32 @@
 {
   "dependencies": {
     "json-server": "^1.0.0-beta.3"
-  }
+  },
+  "name": "phase-1-project",
+  "version": "1.0.0",
+  "description": "Moringa School Club Hub 🏫 A modern, responsive Single Page Application (SPA) for managing and discovering school clubs at Moringa School. Built with HTML, CSS, and JavaScript, this platform helps students explore clubs, view events, and register for their interests.",
+  "main": "index.js",
+  "scripts": {
+    "name": "phase-1-project",
+    "version": "1.0.0",
+    "description": "School Club App",
+    "main": "index.js",
+    "scripts": {
+      "start": "json-server --watch db.json --host 0.0.0.0 --port $PORT"
+    },
+    "dependencies": {
+      "json-server": "^1.0.0-beta.3"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyrxallan/Phase-1-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pyrxallan/Phase-1-Project/issues"
+  },
+  "homepage": "https://github.com/pyrxallan/Phase-1-Project#readme"
 }
