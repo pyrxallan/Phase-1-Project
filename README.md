@@ -1,6 +1,7 @@
 # Phase-1-Project
 
-Moringa School Club Hub 🏫
+## Moringa School Club Hub 🏫
+
 A modern, responsive Single Page Application (SPA) for managing and discovering school clubs at Moringa School. Built with HTML, CSS, and JavaScript, this platform helps students explore clubs, view events, and register for their interests.
 
 https://img.shields.io/badge/Moringa-School%2520Club%2520Hub-green
