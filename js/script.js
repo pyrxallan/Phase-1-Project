@@ -6,7 +6,7 @@ class SchoolClubApp {
         // For Render deployment
         this.baseUrl = window.location.hostname === 'localhost' 
             ? 'http://localhost:3000' 
-            : 'https://your-app-name.onrender.com';
+            : 'https://school-club-app.onrender.com';
         this.init();
     }
 
