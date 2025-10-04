@@ -3,7 +3,10 @@ class SchoolClubApp {
         this.clubs = [];
         this.filteredClubs = [];
         this.currentView = 'clubs';
-        this.baseUrl = 'http://localhost:3000';
+        // For Render deployment
+        this.baseUrl = window.location.hostname === 'localhost' 
+            ? 'http://localhost:3000' 
+            : 'https://school-club-app.onrender.com';
         this.init();
     }
 
@@ -40,7 +43,7 @@ class SchoolClubApp {
         document.getElementById('category-filter').addEventListener('change', (e) => this.handleCategoryFilter(e));
 
         // Theme toggle
-        document.getElementById('theme-toggle').addEventListener('click', () => this.toggleTheme());
+        // document.getElementById('theme-toggle').addEventListener('click', () => this.toggleTheme());
 
         // Registration form
         document.getElementById('registration-form').addEventListener('submit', (e) => this.handleRegistration(e));
