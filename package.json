@@ -1,14 +1,18 @@
 {
+  "name": "phase-1-project",
+  "version": "1.0.0",
+  "description": "Moringa School Club Hub",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server db.json --host 0.0.0.0 --port $PORT",
+    "dev": "json-server --watch db.json",
+    "deploy": "gh-pages -d ."
+  },
   "dependencies": {
     "json-server": "^1.0.0-beta.3"
   },
-  "name": "phase-1-project",
-  "version": "1.0.0",
-  "description": "Moringa School Club Hub 🏫 A modern, responsive Single Page Application (SPA) for managing and discovering school clubs at Moringa School. Built with HTML, CSS, and JavaScript, this platform helps students explore clubs, view events, and register for their interests.",
-  "main": "index.js",
-  "scripts": {
-    "start": "json-server --watch db.json --host 0.0.0.0 --port ${PORT:-3000}",
-    "dev": "json-server --watch db.json"
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   },
   "repository": {
     "type": "git",
