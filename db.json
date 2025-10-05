@@ -1,7 +1,7 @@
 {
   "clubs": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Code Masters Club",
       "description": "Advanced programming club for Moringa students to collaborate on real-world projects and prepare for tech careers.",
       "category": "Technology",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Data Science Guild",
       "description": "Explore data analysis, machine learning, and AI technologies with hands-on projects and industry insights.",
       "category": "Technology",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "UX Design Collective",
       "description": "Learn user experience design principles and create innovative digital solutions for local communities.",
       "category": "Design",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Cyber Security Squad",
       "description": "Develop security skills through ethical hacking challenges and cybersecurity competitions.",
       "category": "Technology",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Entrepreneurship Hub",
       "description": "Foster innovation and business skills through startup simulations and mentorship programs.",
       "category": "Business",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Community Tech Outreach",
       "description": "Apply tech skills to solve community challenges and promote digital literacy in Nairobi.",
       "category": "Service",
