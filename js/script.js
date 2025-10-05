@@ -205,46 +205,80 @@ class SchoolClubApp {
         document.getElementById('club-modal').style.display = 'block';
     }
 
-    // In your ClubHub class
-    registerStudent(studentData, clubId) {
-        if (window.location.hostname === 'localhost') {
-            // Local development - use JSON Server
-            return this.registerWithJSONServer(studentData, clubId);
-        } else {
-            // Production - use localStorage
-            return this.registerWithLocalStorage(studentData, clubId);
-        }
+    // Prepare registration form with selected club
+    prepareRegistration(clubId) {
+        this.closeModal();
+        
+        // Switch to registration view
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelector('[data-view="register"]').classList.add('active');
+        
+        document.querySelectorAll('.view').forEach(view => view.classList.remove('active'));
+        document.getElementById('register-view').classList.add('active');
+        
+        // Set the club select value
+        document.getElementById('club-select').value = clubId;
     }
 
-    registerWithLocalStorage(studentData, clubId) {
-        return new Promise((resolve) => {
-            const registration = {
-                id: Math.random().toString(36).substr(2, 9),
-                ...studentData,
-                clubId: clubId,
-                timestamp: new Date().toISOString()
-            };
-            
-            const existing = JSON.parse(localStorage.getItem('clubRegistrations') || '[]');
-            existing.push(registration);
-            localStorage.setItem('clubRegistrations', JSON.stringify(existing));
-            
-            resolve(registration);
-        });
+    // Close modal
+    closeModal() {
+        document.getElementById('club-modal').style.display = 'none';
     }
 
-    // Update your display method to show both sources
-    async displayRegistrations() {
-        let registrations = [];
+    // Populate club select dropdown
+    populateClubSelect() {
+        const select = document.getElementById('club-select');
+        select.innerHTML = '<option value="">Choose a Club</option>' +
+            this.clubs.map(club => 
+                `<option value="${club.id}">${club.name}</option>`
+            ).join('');
+    }
+
+    async handleRegistration(event) {
+        event.preventDefault();
         
-        if (window.location.hostname === 'localhost') {
-            const response = await fetch(`${this.baseUrl}/registrations`);
-            registrations = await response.json();
-        } else {
-            registrations = JSON.parse(localStorage.getItem('clubRegistrations') || '[]');
+        const formData = {
+            name: document.getElementById('student-name').value,
+            email: document.getElementById('student-email').value,
+            grade: document.getElementById('student-grade').value,
+            clubId: parseInt(document.getElementById('club-select').value),
+            timestamp: new Date().toISOString()
+        };
+        
+        console.log('Form data:', formData); // Debug log
+        
+        const selectedClub = this.clubs.find(c => c.id === formData.clubId);
+        console.log('Selected club:', selectedClub); // Debug log
+        
+        try {
+            console.log('Attempting to post to:', `${this.baseUrl}/registrations`); // Debug log
+            
+            const response = await fetch(`${this.baseUrl}/registrations`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            console.log('Response status:', response.status); // Debug log
+            console.log('Response ok:', response.ok); // Debug log
+
+            if (response.ok) {
+                this.showNotification(`Successfully registered for ${selectedClub.name}! We'll contact you at ${formData.email}`, 'success');
+                document.getElementById('registration-form').reset();
+                
+                // Update club member count (simulated)
+                selectedClub.members += 1;
+                this.renderClubs();
+            } else {
+                console.error('Response not OK:', await response.text());
+                this.showNotification('Error submitting registration. Please try again.', 'error');
+            }
+        } catch (error) {
+            console.error('Fetch error:', error); // This will now show the actual error
+            this.showNotification('Error submitting registration. Please try again.', 'error');
         }
-        
-        // Display the registrations...
     }
 
     // Toggle dark/light mode
