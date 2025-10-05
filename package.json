@@ -2,7 +2,7 @@
   "name": "phase-1-project",
   "version": "1.0.0",
   "description": "Moringa School Club Hub",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "json-server --watch db.json",
