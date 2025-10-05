@@ -246,7 +246,6 @@ class SchoolClubApp {
             timestamp: new Date().toISOString()
         };
         
-        // Validate club selection
         if (!formData.clubId || isNaN(formData.clubId)) {
             this.showNotification('Please select a club', 'error');
             return;
