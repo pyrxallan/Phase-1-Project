@@ -238,27 +238,24 @@ class SchoolClubApp {
     async handleRegistration(event) {
         event.preventDefault();
         
-        const clubSelectValue = document.getElementById('club-select').value;
-        
-        // Validate club selection first
-        if (!clubSelectValue || clubSelectValue === '') {
-            this.showNotification('Please select a club', 'error');
-            return;
-        }
-        
         const formData = {
             name: document.getElementById('student-name').value,
             email: document.getElementById('student-email').value,
             grade: document.getElementById('student-grade').value,
-            clubId: clubSelectValue, // Keep as string to match db.json
+            clubId: parseInt(document.getElementById('club-select').value),
             timestamp: new Date().toISOString()
         };
         
-        // Use == instead of === to handle string/number comparison
-        const selectedClub = this.clubs.find(c => c.id == formData.clubId);
+        // Validate club selection
+        if (!formData.clubId || isNaN(formData.clubId)) {
+            this.showNotification('Please select a club', 'error');
+            return;
+        }
+        
+        const selectedClub = this.clubs.find(c => c.id === formData.clubId);
         
         if (!selectedClub) {
-            this.showNotification('Selected club not found. Please try again.', 'error');
+            this.showNotification('Selected club not found', 'error');
             return;
         }
         
