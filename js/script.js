@@ -234,7 +234,7 @@ class SchoolClubApp {
             ).join('');
     }
 
-    // Handle registration form submission
+    // Handle form registration
     async handleRegistration(event) {
         event.preventDefault();
         
